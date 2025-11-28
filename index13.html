@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Masai Calculator</title>
+<style>
+    body{
+        font-family: Arial, sans-serif;
+        background:#f5f5f5;
+        padding:40px;
+        text-align:center;
+    }
+
+    h1{
+        font-size:32px;
+        margin-bottom:30px;
+        color:#0b5858;
+    }
+
+    .calc-box{
+        width:330px;
+        margin:0 auto;
+        background:#fff;
+        padding:30px;
+        border-radius:6px;
+        box-shadow:0 0 12px rgba(0,0,0,0.15);
+    }
+
+    .display{
+        width:100%;
+        height:45px;
+        background:#f2f2f2;
+        border-radius:6px;
+        margin-bottom:20px;
+    }
+
+    .btn-grid{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap:12px;
+    }
+
+    .btn{
+        height:45px;
+        background:#eee;
+        border-radius:6px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:18px;
+        font-weight:bold;
+        cursor:pointer;
+        user-select:none;
+    }
+
+    .black{
+        background:#000;
+        color:#fff;
+    }
+
+    .red{
+        background:#e60000;
+        color:#fff;
+    }
+</style>
+</head>
+<body>
+
+<h1>Masai Calculator</h1>
+
+<div class="calc-box">
+    <div class="display"></div>
+
+    <div class="btn-grid">
+        <div class="btn">1</div>
+        <div class="btn">2</div>
+        <div class="btn">3</div>
+        <div class="btn black">+</div>
+
+        <div class="btn">4</div>
+        <div class="btn">5</div>
+        <div class="btn">6</div>
+        <div class="btn black">-</div>
+
+        <div class="btn">7</div>
+        <div class="btn">8</div>
+        <div class="btn">9</div>
+        <div class="btn black">x</div>
+
+        <div class="btn red">C</div>
+        <div class="btn">0</div>
+        <div class="btn black">=</div>
+        <div class="btn black">/</div>
+    </div>
+</div>
+
+</body>
+</html>

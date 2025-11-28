@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bar Assignment</title>
+
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #header {
+      background-color: #0A0C14; 
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 15px 90px 15px 70px; 
+      height: 80px;
+    }
+    .logo {
+      font-size: 38px;
+      font-weight: bold;
+      color: #2BA8E0; 
+      margin-right: 200px; 
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #CFCFCF; 
+      font-weight: normal;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 70px; 
+    }
+
+    .nav-link {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 20px; 
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #2BA8E0;
+    }
+    .nav-link:first-child {
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+    .nav-link:last-child {
+      color: #2BA8E0;
+      font-weight: bold;
+    }
+    header, nav {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="logo">Be<span>blog</span></div>
+    <nav>
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Web design</a>
+      <a href="#" class="nav-link">WordPress</a>
+      <a href="#" class="nav-link">About us</a>
+      <a href="#" class="nav-link">BeAdvice</a>
+      <a href="#" class="nav-link">Buy BeTheme</a>
+    </nav>
+  </header>
+
+</body>
+</html>

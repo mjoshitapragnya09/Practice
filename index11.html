@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weekly Schedule</title>
+<style>
+    body{
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background:#f8fafc;
+        padding:30px;
+    }
+
+    h1{
+        text-align:center;
+        font-size:36px;
+        margin-bottom:20px;
+        color:#2a3855;
+        font-weight:700;
+    }
+
+    .schedule-wrapper{
+        max-width:1100px;
+        margin:0 auto;
+        padding:20px;
+    }
+
+    .schedule-grid{
+        display:grid;
+        grid-template-columns: 120px repeat(5, 1fr);
+        gap:12px;
+        align-items:center;
+    }
+
+    .cell{
+        background:#ffe4ef;
+        padding:14px;
+        border-radius:25px;
+        text-align:center;
+        font-size:16px;
+        font-weight:600;
+        color:#333;
+    }
+
+    .time{
+        background:#b7ecf7;
+        font-weight:700;
+    }
+
+    .day{
+        background:#ffdede;
+        font-size:17px;
+        font-weight:700;
+    }
+
+    .yellow{
+        background:#fff4b8;
+    }
+
+    .pink{
+        background:#ffd7f2;
+    }
+
+    .note{
+        grid-column: 1 / span 6;
+        margin-top:20px;
+        background:#b7ecf7;
+        padding:16px;
+        border-radius:20px;
+        font-weight:600;
+        color:#333;
+    }
+</style>
+</head>
+<body>
+
+<h1>Weekly Schedule</h1>
+
+<div class="schedule-wrapper">
+    <div class="schedule-grid">
+        <div class="cell"></div>
+        <div class="cell day">Monday</div>
+        <div class="cell day">Tuesday</div>
+        <div class="cell day">Wednesday</div>
+        <div class="cell day">Thursday</div>
+        <div class="cell day">Friday</div>
+
+        <div class="cell time">08:00</div>
+        <div class="cell pink">Math</div>
+        <div class="cell yellow">English</div>
+        <div class="cell pink">EVS</div>
+        <div class="cell yellow">PT</div>
+        <div class="cell pink">Music</div>
+
+        <div class="cell time">09:00</div>
+        <div class="cell yellow">Science</div>
+        <div class="cell pink">Math</div>
+        <div class="cell yellow">Drawing</div>
+        <div class="cell pink">English</div>
+        <div class="cell yellow">EVS</div>
+
+        <div class="cell time">10:00</div>
+        <div class="cell pink">Computer</div>
+        <div class="cell yellow">PT</div>
+        <div class="cell pink">Math</div>
+        <div class="cell yellow">Science</div>
+        <div class="cell pink">English</div>
+
+        <div class="cell time">11:00</div>
+        <div class="cell yellow">Break</div>
+        <div class="cell yellow">Break</div>
+        <div class="cell yellow">Break</div>
+        <div class="cell yellow">Break</div>
+        <div class="cell yellow">Break</div>
+
+        <div class="cell time">12:00</div>
+        <div class="cell pink">English</div>
+        <div class="cell yellow">Math</div>
+        <div class="cell pink">Science</div>
+        <div class="cell yellow">EVS</div>
+        <div class="cell pink">Drawing</div>
+
+        <div class="cell time">13:00</div>
+        <div class="cell yellow">EVS</div>
+        <div class="cell pink">Music</div>
+        <div class="cell yellow">Computer</div>
+        <div class="cell pink">Math</div>
+        <div class="cell yellow">PT</div>
+
+        <div class="cell time">14:00</div>
+        <div class="cell pink">English</div>
+        <div class="cell yellow">Science</div>
+        <div class="cell pink">PT</div>
+        <div class="cell yellow">Music</div>
+        <div class="cell pink">Computer</div>
+
+        <div class="cell time">15:00</div>
+        <div class="cell yellow">Project</div>
+        <div class="cell pink">Activities</div>
+        <div class="cell yellow">Activity</div>
+        <div class="cell pink">Craft</div>
+        <div class="cell yellow">Reading</div>
+
+        <div class="cell time">16:00</div>
+        <div class="cell pink">Revision</div>
+        <div class="cell yellow">Revision</div>
+        <div class="cell pink">Revision</div>
+        <div class="cell yellow">Revision</div>
+        <div class="cell pink">Revision</div>
+
+        <div class="note">Note: This is a sample primary class timetable.</div>
+    </div>
+</div>
+
+</body>
+</html>

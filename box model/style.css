@@ -1,0 +1,47 @@
+body {
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Outer vertical box */
+.main-box {
+    width: 300px;
+    background: #d3c1f2;  /* light purple */
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Title */
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3d246f;
+    margin-bottom: 25px;
+}
+
+/* White cards inside */
+.inner-card {
+    background: #ffffff;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 12px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.1);
+}
+
+/* Small text */
+.label {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+/* Bold big numbers */
+.value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
