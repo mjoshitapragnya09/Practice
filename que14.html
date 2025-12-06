@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1 - Enhanced Todo List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #todoList li {
+            padding: 8px;
+            margin-top: 6px;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: rgb(116, 116, 116);
+        }
+
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enhanced Todo List</h2>
+
+    
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button id="addTaskBtn">Add Task</button>
+    <br><br>
+
+    
+    <input type="text" id="searchInput" placeholder="Search task...">
+    <br><br>
+
+   
+    <ul id="todoList"></ul>
+
+    <script>
+        
+        let taskInput = document.getElementById("taskInput");
+        let addTaskBtn = document.getElementById("addTaskBtn");
+        let searchInput = document.getElementById("searchInput");
+        let todoList = document.getElementById("todoList");
+
+       
+        let tasks = [];
+
+     
+        window.addEventListener("load", function() {
+            let savedTasks = localStorage.getItem("todos");
+            if (savedTasks) {
+                tasks = JSON.parse(savedTasks);
+                displayTasks(tasks);
+            }
+        });
+
+        addTaskBtn.addEventListener("click", function() {
+            let text = taskInput.value.trim();
+            if (text === "") {
+                alert("Please enter a task.");
+                return;
+            }
+
+            let task = {
+                id: Date.now(), 
+                text: text,
+                completed: false
+            };
+
+            tasks.push(task);
+            saveTasks();
+            displayTasks(tasks);
+
+            taskInput.value = ""; 
+        });
+
+        function saveTasks() {
+            localStorage.setItem("todos", JSON.stringify(tasks));
+        }
+
+        function displayTasks(list) {
+            todoList.innerHTML = ""; // Clear existing list
+
+            list.forEach((task) => {
+                let li = document.createElement("li");
+
+               
+                if (task.completed) {
+                    li.classList.add("completed");
+                }
+
+                li.innerHTML = `
+                    <span>${task.text}</span>
+                    <div>
+                        <button onclick="toggleComplete(${task.id})">✔</button>
+                        <button onclick="deleteTask(${task.id})">❌</button>
+                    </div>
+                `;
+
+                todoList.appendChild(li);
+            });
+        }
+
+     
+        function toggleComplete(id) {
+            tasks = tasks.map(task => {
+                if (task.id === id) {
+                    task.completed = !task.completed;
+                }
+                return task;
+            });
+
+            saveTasks();
+            displayTasks(tasks);
+        }
+
+        function deleteTask(id) {
+            tasks = tasks.filter(task => task.id !== id);
+            saveTasks();
+            displayTasks(tasks);
+        }
+
+        searchInput.addEventListener("keyup", function() {
+            let keyword = searchInput.value.toLowerCase();
+
+            let filteredTasks = tasks.filter(task => 
+                task.text.toLowerCase().includes(keyword)
+            );
+
+            displayTasks(filteredTasks);
+        });
+
+    </script>
+
+</body>
+</html>
