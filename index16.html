@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L0 - Creating and Removing Elements</title>
+</head>
+<body>
+
+   
+    <button id="addBtn">Add Paragraph</button>
+    <button id="removeBtn">Remove Last Paragraph</button>
+
+    <div id="container"></div>
+
+    <script>
+        let container = document.getElementById("container");
+
+        let addButton = document.getElementById("addBtn");
+        let removeButton = document.getElementById("removeBtn");
+
+        addButton.addEventListener("click", function () {
+            let para = document.createElement("p");
+
+            
+            para.textContent = "This is a new paragraph.";
+
+           
+            container.appendChild(para);
+        });
+
+       
+        removeButton.addEventListener("click", function () {
+            
+            let lastPara = container.lastElementChild;
+
+            if (lastPara) {
+                container.removeChild(lastPara);
+            }
+        });
+    </script>
+
+</body>
+</html>
